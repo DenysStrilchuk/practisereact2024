@@ -40,7 +40,7 @@ const App = () => {
     ];
     return (
         <div>
-            {simpsons.map(simson => <Characters character={simson}/>)}
+            {simpsons.map(simpson => <Characters character={simpson} key={simpson.age}/>)}
         </div>
     );
 };
