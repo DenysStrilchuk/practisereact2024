@@ -1,4 +1,5 @@
-const Characters = ({name, surname, age, info, photo}) => {
+const Characters = ({character}) => {
+    const {name, surname, age, info, photo} = character;
     return (
         <div>
             <h1>{name} {surname}</h1>
