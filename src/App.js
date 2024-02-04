@@ -1,5 +1,5 @@
 import {Characters} from "./componetnts/Characters";
-
+import {Characters2} from "./componetnts/Characters2"
 const App = () => {
     const arr = [
         {
@@ -111,9 +111,29 @@ const App = () => {
             "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
         }
     ]
+    const arr2 = [
+        {"id": 19,
+            "name": "Antenna Rick",
+            "status": "unknown",
+            "species": "Human",
+            "type": "Human with antennae",
+            "gender": "Male",
+            "image": "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
+        },
+        {
+        "id": 20,
+        "name": "Ants in my Eyes Johnson",
+        "status": "unknown",
+        "species": "Human",
+        "type": "Human with ants in his eyes",
+        "gender": "Male",
+        "image": "https://rickandmortyapi.com/api/character/avatar/20.jpeg",
+        }
+    ]
     return (
         <div>
             {arr.map(character => <Characters character={character} key={character.id}/>)}
+            {arr2.map(charakter2 => <Characters2 character={charakter2} key={charakter2.id}/>)}
         </div>
     );
 };
