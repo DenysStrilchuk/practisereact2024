@@ -1,9 +1,10 @@
-const Post = ({item}) => {
-const {id, title, btn} = item;
+const Post = ({post, getCurrentPost}) => {
+const {id, title} = post;
+
     return (
         <div>
-            <h2>{id} - {title}</h2>
-            <button onClick={btn}>More info</button>
+            <p>{id} - {title}</p>
+            <button onClick={() => getCurrentPost(post)}>Details</button>
         </div>
     );
 };

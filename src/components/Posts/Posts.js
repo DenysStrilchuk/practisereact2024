@@ -1,20 +1,25 @@
 import {useEffect, useState} from "react";
 import {Post} from "../Post/Post";
+import {postService} from "../../services/postService";
+import {PostDetails} from "../PostDetails/PostDetails";
 
 const Posts = () => {
-    const [users, setUsers] = useState([]);
+    const [posts, setPosts] = useState([]);
+    const [postDetails, setPostDetails] = useState(null);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(value => value.json())
-            .then(value => {
-                setUsers(value);
-            });
+        postService.getAll().then(({data}) => setPosts(data));
     }, []);
+
+const getCurrentPost = (post) => {
+    setPostDetails(post);
+}
 
     return (
         <div>
-            {users.map(value => <Post item={value} key={value.id} btn={value}/>)}
+            {posts.map(post => <Post post={post} key={post.id} getCurrentPost={getCurrentPost}/>)}
+            <hr/>
+            {postDetails != null && <PostDetails  postDetails={postDetails}/>}
         </div>
     );
 };
