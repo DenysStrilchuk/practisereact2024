@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {postService} from "../../services/postService";
 import {Post} from "../PostContainer/Post";
 import {PostDetails} from "../PostDetails/PostDetails";
-import css from "../PostsContainer/Posts-module.css"
+import css from "./Posts.module.css"
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
