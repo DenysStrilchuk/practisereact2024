@@ -1,10 +1,10 @@
-const Post = ({post, setPostsDetails}) => {
+const Post = ({post, setPostDetails}) => {
     const {id, title} = post;
     return (
         <div>
             <div>{id}</div>
             <div>{title}</div>
-            <button>Details</button>
+            <button onClick={() => setPostDetails(post)}>Details</button>
         </div>
     );
 };
