@@ -1,11 +1,11 @@
-import {rickAndMortyAPIService} from "../../services/rickAndMortyAPIService";
 import {useEffect, useState} from "react";
 import {Character} from "../CharacterContainer/Character";
+import {charactersService} from "../../services/charactersService";
 
 const Characters = () => {
     const [characters, setCharacters] = useState([]);
     useEffect(() => {
-        rickAndMortyAPIService.getAll().then(({data}) => setCharacters(data));
+        charactersService.getAll().then(({data}) => setCharacters(data));
     }, []);
     return (
         <div>
