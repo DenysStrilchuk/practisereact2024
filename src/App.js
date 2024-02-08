@@ -1,7 +1,9 @@
+import {Characters} from "./components/CharactersContainer/Characters";
+
 const App = () => {
     return (
         <div>
-            App
+            <Characters/>
         </div>
     );
 };
