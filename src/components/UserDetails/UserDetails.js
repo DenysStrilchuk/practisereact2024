@@ -1,4 +1,4 @@
-const CharacterDetails = () => {
+const UserDetails = () => {
     return (
         <div>
             CharacterDetails
@@ -6,4 +6,4 @@ const CharacterDetails = () => {
     );
 };
 
-export {CharacterDetails};
+export {UserDetails};

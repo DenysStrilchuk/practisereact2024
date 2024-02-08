@@ -1,5 +1,5 @@
-const Character = ({character}) => {
-    const {results:{id,name}} = character;
+const User = ({user}) => {
+    const {id, name} = user;
     return (
         <div>
             <div>{id}</div>
@@ -8,4 +8,4 @@ const Character = ({character}) => {
     );
 };
 
-export {Character};
+export {User};
