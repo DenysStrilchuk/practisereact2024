@@ -3,7 +3,7 @@ import {rickAndMortyAPIService} from "./rickAndMortyAPIService";
 
 
 const charactersService = {
-    getAll: () => rickAndMortyAPIService.get(urls.characters)
+    getAll: () => rickAndMortyAPIService.get(urls.characters).then(response => response.data.results)
 }
 
 
