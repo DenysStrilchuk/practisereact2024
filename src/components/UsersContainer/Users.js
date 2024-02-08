@@ -3,7 +3,7 @@ import {usersService} from "../../services/usersService";
 import {User} from "../UserContainer/User";
 
 const Users = () => {
-const {users, setUsers} = useState([]);
+const [users, setUsers] = useState([]);
     useEffect(() => {
         usersService.getAll().then(({data}) => setUsers(data));
     }, []);
