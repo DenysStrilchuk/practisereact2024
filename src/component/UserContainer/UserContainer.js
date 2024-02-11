@@ -1,7 +1,16 @@
+import {UserForm} from "./UserForm";
+import {Users} from "./Users";
+import {usersService} from "../../services/usersService";
+import {useState} from "react";
+
 const UserContainer = () => {
+    const [users, setUsers] = useState([]);
+
     return (
         <div>
-            UserContainer
+            <UserForm/>
+            <hr/>
+            <Users/>
         </div>
     );
 };
