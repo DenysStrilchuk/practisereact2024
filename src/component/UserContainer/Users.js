@@ -1,7 +1,9 @@
-const Users = () => {
+import {User} from "./User";
+
+const Users = ({users}) => {
     return (
         <div>
-            Users
+            {users.map(user => <User key={user.id} user={user}/>)}
         </div>
     );
 };

@@ -1,8 +1,9 @@
 const UserForm = () => {
+    const {} = useForm();
     return (
-        <div>
-            UserForm
-        </div>
+        <form>
+            <input type="text"  placeholder={''}/>
+        </form>
     );
 };
 

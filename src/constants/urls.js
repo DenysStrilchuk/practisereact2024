@@ -5,7 +5,7 @@ const users = '/users';
 const urls = {
     users: {
         base: users,
-        byId: `${users}/${id}`
+        byId: (id) => `${users}/${id}`
     }
 }
 
