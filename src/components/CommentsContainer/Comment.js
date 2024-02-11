@@ -1,7 +1,8 @@
-const Comment = () => {
+const Comment = ({comment}) => {
+    const {id} = comment;
     return (
         <div>
-            Comment
+            <div>{id}</div>
         </div>
     );
 };
