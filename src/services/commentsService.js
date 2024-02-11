@@ -3,5 +3,7 @@ import {urls} from "../constants/urls";
 
 const commentsService = {
     getAll: () => apiService.get(urls.comments.base),
-    create: ()
+    getById: (id) => apiService(urls.comments.byId(id)),
+    create: (data) => apiService.get(urls.comments.base, data)
+
 }
