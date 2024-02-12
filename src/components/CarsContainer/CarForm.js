@@ -1,11 +1,12 @@
 import {useForm} from "react-hook-form";
 import {carsService} from "../../services/carsService";
 
-const CarForm = ({setCars}) => {
+const CarForm = ({setCars, setTrigger}) => {
     const {reset, register, handleSubmit} = useForm();
 
     const save = async (car) => {
-       await carsService.create(car).then(perv => [...perv => !perv]);
+       await carsService.create(car);
+       setTrigger(prev => !prev);
        reset()
     }
 
