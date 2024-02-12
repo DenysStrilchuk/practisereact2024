@@ -6,7 +6,7 @@ const carsService = {
     getById: (id) => apiService.get(urls.cars.byId(id)),
     create: (data) => apiService.post(urls.cars.base, data),
     deleteById: (id) => apiService.delete(urls.cars.byId(id)),
-    updateById: (id, data) => apiService.post(urls.cars.byId(id), data)
+    updateById: (id, data) => apiService.put(urls.cars.byId(id), data)
 }
 
 
