@@ -1,10 +1,15 @@
 import {useForm} from "react-hook-form";
 
 import {carsService} from "../../services/carsService";
+import {useEffect} from "react";
 
 const CarForm = ({setTrigger, carForUpdate, setCarForUpdate}) => {
     const {reset, register, handleSubmit, setValue} = useForm();
-    carForUpdate =
+    useEffect(() => {
+        if (carForUpdate) {
+            setValue('brand' )
+        }
+    }, []);
     const save = (car) => {
         carsService.create(car)
         setTrigger(prev => !prev)
