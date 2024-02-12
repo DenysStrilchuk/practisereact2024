@@ -12,7 +12,7 @@ const CarsContainer = () => {
 
     return (
         <div>
-            <CarForm/>
+            <CarForm setCars={setCars}/>
             <hr/>
             <Cars cars={cars}/>
         </div>
