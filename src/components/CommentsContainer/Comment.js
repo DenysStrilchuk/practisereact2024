@@ -1,8 +1,13 @@
 const Comment = ({comment}) => {
-    const {id} = comment;
+    const {postId, id, name, email, body} = comment;
     return (
         <div>
-            <div>{id}</div>
+            <div>postId: {postId}</div>
+            <div>id: {id}</div>
+            <div>name: {name}</div>
+            <div>email: {email}</div>
+            <div>body: {body}</div>
+            <hr/>
         </div>
     );
 };

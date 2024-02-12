@@ -12,7 +12,7 @@ const CommentsContainer = () => {
     }, []);
     return (
         <div>
-            <CommentForm/>
+            <CommentForm setComments={setComments}/>
             <hr/>
             <Comments comments={comments}/>
         </div>
