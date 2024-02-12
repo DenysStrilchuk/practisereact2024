@@ -19,17 +19,17 @@ const CarForm = ({setTrigger, carForUpdate, setCarForUpdate}) => {
     }
 
     const update = async (car) => {
-        await carsService.updateById(car)
+        await carsService.updateById(carForUpdate.id, car)
         setTrigger(prev => !prev)
         reset
     }
 
     return (
-        <form onSubmit={handleSubmit(save)}>
+        <form onSubmit={handleSubmit(carForUpdate?update:save)}>
             <input type="text" placeholder={'brand'} {...register('brand')}/>
             <input type="text" placeholder={'price'} {...register('price')}/>
             <input type="text" placeholder={'year'} {...register('year')}/>
-            <button>save</button>
+            <button>{carForUpdate?'update':'save'}</button>
         </form>
     );
 };
