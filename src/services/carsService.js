@@ -9,3 +9,7 @@ const carsService = {
     updateById: (id, data) => apiService.post(urls.cars.byId(id), data)
 }
 
+
+export {
+    carsService
+}
