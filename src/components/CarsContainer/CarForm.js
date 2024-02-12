@@ -7,7 +7,9 @@ const CarForm = ({setTrigger, carForUpdate, setCarForUpdate}) => {
     const {reset, register, handleSubmit, setValue} = useForm();
     useEffect(() => {
         if (carForUpdate) {
-            setValue('brand' )
+            setValue('brand', carForUpdate.brand, {shouldValidate: true})
+            setValue('price', carForUpdate.price, {shouldValidate: true})
+            setValue('year', carForUpdate.year, {shouldValidate: true})
         }
     }, []);
     const save = (car) => {
