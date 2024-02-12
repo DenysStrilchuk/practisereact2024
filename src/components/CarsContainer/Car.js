@@ -1,8 +1,11 @@
 import {carsService} from "../../services/carsService";
-import {useEffect} from "react";
-
-const Car = ({car, setCarForUpdate}) => {
+const Car = ({car, setCarForUpdate, setTrigger}) => {
     const {id, brand, price, year} = car;
+
+    const deleteCar = async () => {
+        await carsService.deleteById(id)
+        setTrigger(prev => !prev)
+    }
 
     return (
         <div>
@@ -11,7 +14,7 @@ const Car = ({car, setCarForUpdate}) => {
             <div>price: {price}</div>
             <div>year: {year}</div>
             <button  onClick={() => setCarForUpdate(car)}>update</button>
-            <button>delete</button>
+            <button onClick={deleteCar}>delete</button>
             <hr/>
         </div>
     );
