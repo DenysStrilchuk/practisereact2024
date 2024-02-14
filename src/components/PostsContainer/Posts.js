@@ -10,7 +10,7 @@ const Posts = () => {
 
     useEffect(() => {
         postsService.getById(postId).then(({data}) => setPosts(data))
-    }, []);
+    }, [postId]);
     return (
         <div>
             {post && <Post key={post.id} post={post}/>}
