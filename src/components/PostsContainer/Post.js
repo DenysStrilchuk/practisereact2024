@@ -1,7 +1,12 @@
-const Post = () => {
+import {useNavigate} from "react-router-dom";
+
+const Post = ({post}) => {
+    const {id, title} = post;
+    const navigate = useNavigate();
     return (
         <div>
-            Post
+            <div>tittle: {title}</div>
+            <button onClick={() => navigate(`/post/${id}`)}>post details</button>
         </div>
     );
 };

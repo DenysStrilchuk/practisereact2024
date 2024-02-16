@@ -1,7 +1,11 @@
+import {Posts} from "../components/PostsContainer/Posts";
+import {useParams} from "react-router-dom";
+
 const PostsPage = () => {
+    const {id} = useParams();
     return (
         <div>
-            PostsPage
+           <Posts userId={id}/>
         </div>
     );
 };
