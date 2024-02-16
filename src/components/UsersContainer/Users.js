@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 
 import {userService} from "../../services/userService";
-import {User} from "../UsersContainer/User"
+import {User} from "./User";
+
 
 const Users = () => {
     const [users, setUsers] = useState([]);
