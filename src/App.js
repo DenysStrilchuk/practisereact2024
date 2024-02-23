@@ -13,8 +13,6 @@
 // export {App};
 
 import {A} from "./components/A";
-import {createContext} from "react";
-const Context = createContext(null);
 
 const App = () => {
     return (
@@ -25,6 +23,5 @@ const App = () => {
 };
 
 export {
-    App,
-    Context
+    App
 };
