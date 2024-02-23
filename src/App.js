@@ -19,10 +19,7 @@ const Context = createContext(null);
 const App = () => {
     return (
         <div>
-            <Context.Provider value={'Hello from context'}>
                 <A/>
-            </Context.Provider>
-
         </div>
     );
 };
