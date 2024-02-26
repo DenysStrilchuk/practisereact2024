@@ -36,13 +36,15 @@ const Movies = () => {
             <div className={css.movies_list}>
                 {movies.results.map(movie => <Movie key={movie.id} movie={movie} />)}
             </div>
-            <div className={css.buttons}>
-                <button disabled={isPrevDisabled} onClick={prevPage}>prev</button>
-                <button disabled={isNextDisabled} onClick={nextPage}>next</button>
+            <div className={css.buttons_block}>
+                <button disabled={isPrevDisabled} onClick={prevPage} className={css.buttons}>prev</button>
+                <div>
+                    <Pagination currentPage={parseInt(page)} totalPages={movies.total_pages}
+                                goToPage={goToPage} setPage={setPage}/>
+                </div>
+                <button disabled={isNextDisabled} onClick={nextPage} className={css.buttons}>next</button>
             </div>
-            <div>
-                <Pagination currentPage={parseInt(page)} totalPages={movies.total_pages} goToPage={goToPage} setPage={setPage}/>
-            </div>
+
         </div>
     );
 };
