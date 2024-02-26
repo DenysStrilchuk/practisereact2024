@@ -29,6 +29,8 @@ const Movies = () => {
         setPage(newPage.toString());
     };
 
+
+
     return (
         <div>
             <div className={css.movies_list}>
