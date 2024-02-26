@@ -4,4 +4,5 @@ export * from "./MoviesCard/MoviesCard";
 export * from "./MoviesList/Movie/Movie";
 export * from "./MoviesList/Movies/Movies";
 export * from "./Pagination/Pagination";
+export *  from "./PosterPreview/PosterPreview";
 export * from "./StarsRating /StarsRating";

@@ -1,6 +1,7 @@
 import css from "./Movie.module.css"
 import {StarsRating} from "../../StarsRating ";
 import {useNavigate} from "react-router-dom";
+import {PosterPreview} from "../../PosterPreview/PosterPreview";
 
 
 const Movie = ({movie}) => {
@@ -8,7 +9,7 @@ const Movie = ({movie}) => {
     const navigate = useNavigate();
     return (
         <div className={css.Movie} onClick={() => navigate(`/movie/${id}`)}>
-            <img className={css.movie_img} src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title}/>
+            <PosterPreview img={poster_path} title={title}/>
             <div>{title}</div>
             <StarsRating vote_average={vote_average}/>
         </div>
