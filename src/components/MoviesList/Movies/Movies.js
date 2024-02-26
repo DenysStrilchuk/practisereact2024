@@ -4,10 +4,11 @@ import { Movie } from "../Movie/Movie";
 import css from './Movies.module.css';
 import { usePageQuery } from "../../../hooks";
 import { movieService } from "../../../services";
+import {Pagination} from "../../Pagination";
 
 const Movies = () => {
     const [movies, setMovies] = useState({ prev: null, next: null, results: [] });
-    const { page, prevPage, nextPage } = usePageQuery();
+    const { page, prevPage, nextPage, setPage } = usePageQuery();
     const [isPrevDisabled, setIsPrevDisabled] = useState(true);
     const [isNextDisabled, setIsNextDisabled] = useState(false);
 
@@ -24,6 +25,10 @@ const Movies = () => {
         });
     }, [page]);
 
+    const goToPage = (newPage) => {
+        setPage(newPage.toString());
+    };
+
     return (
         <div>
             <div className={css.movies_list}>
@@ -32,6 +37,9 @@ const Movies = () => {
             <div className={css.buttons}>
                 <button disabled={isPrevDisabled} onClick={prevPage}>prev</button>
                 <button disabled={isNextDisabled} onClick={nextPage}>next</button>
+            </div>
+            <div>
+                <Pagination currentPage={parseInt(page)} totalPages={movies.total_pages} goToPage={goToPage} setPage={setPage}/>
             </div>
         </div>
     );

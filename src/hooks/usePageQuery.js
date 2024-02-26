@@ -19,10 +19,15 @@ const usePageQuery = () => {
         });
     };
 
+    const setPage = (newPage) => {
+        setQuery({ page: newPage.toString() });
+    };
+
     return {
         page,
         prevPage,
-        nextPage
+        nextPage,
+        setPage
     };
 };
 
