@@ -1,7 +1,7 @@
 import css from "./Movie.module.css"
 import {StarsRating} from "../../StarsRating ";
 import {useNavigate} from "react-router-dom";
-import {MoviesCard} from "../../MoviesCard/MoviesCard";
+// import {MoviesCard} from "../../MoviesCard/MoviesCard";
 
 
 const Movie = ({movie}) => {
@@ -12,7 +12,7 @@ const Movie = ({movie}) => {
             <img className={css.movie_img} src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title}/>
             <div>{title}</div>
             <StarsRating vote_average={vote_average}/>
-            <MoviesCard movieId={id}/>
+            {/*<MoviesCard movieId={id}/>*/}
         </div>
     );
 };
