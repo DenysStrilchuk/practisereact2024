@@ -1,7 +1,8 @@
-const MovieCard = () => {
+const MovieCard = ({movieCard}) => {
+    const {id} = movieCard;
     return (
         <div>
-            MovieCard
+            <div>{id}</div>
         </div>
     );
 };
