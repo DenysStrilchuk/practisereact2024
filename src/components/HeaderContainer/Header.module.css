@@ -16,3 +16,7 @@
 .Header a:hover {
     color: khaki;
 }
+
+.Header a [class = 'active'] {
+    color: chocolate;
+}
