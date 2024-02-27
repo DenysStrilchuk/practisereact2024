@@ -17,6 +17,6 @@
     color: khaki;
 }
 
-.Header a [class = 'active'] {
+.Header a[class = 'active'] {
     color: chocolate;
 }
