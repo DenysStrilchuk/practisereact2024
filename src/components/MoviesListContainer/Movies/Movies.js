@@ -4,7 +4,7 @@ import { Movie } from "../Movie/Movie";
 import css from './Movies.module.css';
 import { usePageQuery } from "../../../hooks";
 import { movieService } from "../../../services";
-import {Pagination} from "../../Pagination";
+import {Pagination} from "../../PaginationContainer";
 
 const Movies = () => {
     const [movies, setMovies] = useState({ prev: null, next: null, results: [] });

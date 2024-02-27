@@ -1,7 +1,7 @@
 import css from "./Movie.module.css"
-import {StarsRating} from "../../StarsRating ";
+import {StarsRating} from "../../StarsRatingContainer";
 import {useNavigate} from "react-router-dom";
-import {PosterPreview} from "../../PosterPreview/MainPoster/PosterPreview";
+import {PosterPreview} from "../../PosterPreviewContainer/MainPoster/PosterPreview";
 
 
 const Movie = ({movie}) => {
