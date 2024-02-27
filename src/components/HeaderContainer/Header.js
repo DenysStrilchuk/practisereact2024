@@ -1,11 +1,12 @@
 import css from "./Header.module.css";
-import {NavLink} from "react-bootstrap";
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
         <div className={css.Header}>
             <h1>The Movie Database</h1>
-            <NavLink src={'movies'}>Movie</NavLink>
+            <NavLink to={'/movies'}>Movies</NavLink>
+            <NavLink to={'genres'}>Genres</NavLink>
         </div>
     );
 };
