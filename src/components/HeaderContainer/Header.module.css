@@ -1,8 +1,18 @@
 .Header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: gray;
+    background-color: aqua;
     color: snow;
     height: 100px;
+}
+
+.Header a {
+    text-decoration: none;
+    color: snow;
+    font-size: 35px;
+}
+
+.Header a:hover {
+    color: khaki;
 }
