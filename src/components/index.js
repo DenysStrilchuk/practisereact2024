@@ -1,8 +1,10 @@
 export * from "./Header/Header";
+export * from "./MovieInfo/MovieInfo";
 export * from "./MoviesCard/MovieCard";
 export * from "./MoviesCard/MoviesCard";
 export * from "./MoviesList/Movie/Movie";
 export * from "./MoviesList/Movies/Movies";
 export * from "./Pagination/Pagination";
-export *  from "./PosterPreview/PosterPreview";
+export * from "./PosterPreview/BackdropPoster/BackdropPoster";
+export *  from "./PosterPreview/MainPoster/PosterPreview";
 export * from "./StarsRating /StarsRating";

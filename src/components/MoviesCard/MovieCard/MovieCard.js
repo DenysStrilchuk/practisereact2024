@@ -1,18 +1,17 @@
-import {PosterPreview} from "../../PosterPreview/PosterPreview";
 import css from "./MovieCard.module.css"
 import {StarsRating} from "../../StarsRating ";
+import {MovieInfo} from "../../MovieInfo";
+import {BackdropPoster} from "../../PosterPreview/BackdropPoster";
 
 const MovieCard = ({movieCard}) => {
-    const {poster_path, title, overview, vote_average, genres:[{name}]} = movieCard;
+    const {title, overview, vote_average, genres:[{name}], backdrop_path} = movieCard;
     return (
         <div className={css.MovieCard}>
             <h1>{title}</h1>
-            <PosterPreview img={poster_path} title={title}/>
-            <h2>{overview}</h2>
+            <BackdropPoster img={backdrop_path} title={title}/>
             <h2>Rating</h2>
             <StarsRating vote_average={vote_average}/>
-            <h2>Genres</h2>
-            <p>{name}</p>
+            <MovieInfo overview={overview} rating={vote_average} genres={name}/>
         </div>
     );
 };
