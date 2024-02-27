@@ -1,4 +1,5 @@
 export * from "./GenreBadgeContainer/GenreBadge";
+export * from "./GenreContainer/GenresInfo";
 export * from "./HeaderContainer/Header";
 export * from "./MovieInfoContainer/MovieInfo";
 export * from "./MoviesCardContainer/MovieCard";
