@@ -10,4 +10,6 @@ export * from "./MoviesListContainer/Movies/Movies";
 export * from "./PaginationContainer/Pagination";
 export * from "./PosterPreviewContainer/BackdropPoster/BackdropPoster";
 export *  from "./PosterPreviewContainer/MainPoster/PosterPreview";
+export * from "./SearchMoviesContainer/SearchMovie/SearchMovie";
+export * from "./SearchMoviesContainer/SearchMovies/SearchMovies";
 export * from "./StarsRatingContainer/StarsRating";
