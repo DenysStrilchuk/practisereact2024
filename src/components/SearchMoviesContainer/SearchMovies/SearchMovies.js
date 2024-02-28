@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import {searchService} from "../../../services/searchService";
-import {Movies} from "../../MoviesListContainer";
+import {Movie} from "../../MoviesListContainer";
 
 
 const SearchMovies = () => {
@@ -32,7 +32,7 @@ const SearchMovies = () => {
                 onChange={handleInputChange}
             />
             <button onClick={handleSearch}>Search</button>
-            <Movies movies={movies} />
+            {movies.map(movie => <Movie key={movie.id} movie={movie}/>)}
         </div>
     );
 };
