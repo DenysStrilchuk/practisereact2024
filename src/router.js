@@ -22,10 +22,11 @@ const router = createBrowserRouter([
                 path:'movie/:id', element:<MovieCardPage/>
             },
             {
-                path:'genres', element:<GenresPage/>
-            },
-            {
-                path:'genres/:id', element:<MoviesByGenrePage/>
+                path:'genres', element:<GenresPage/>, children: [
+                    {
+                        path:':id', element:<MoviesByGenrePage/>
+                    }
+                ]
             }
         ]
     }
