@@ -7,7 +7,7 @@ const Header = () => {
             <h1>The Movie Database</h1>
             <NavLink to={'movies'}>Movies</NavLink>
             <NavLink to={'genres'}>Genres</NavLink>
-            <NavLink to={'movies/search'}>Search</NavLink>
+            <NavLink to={'search'}>Search</NavLink>
         </div>
     );
 };

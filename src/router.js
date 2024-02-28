@@ -12,11 +12,7 @@ const router = createBrowserRouter([
                 index:true, element:<Navigate to={'movies'}/>
             },
             {
-                path: 'movies', element: <MoviesListPage/>, children: [
-                    {
-                        path: 'search', element: <SearchPage/>
-                    }
-                ]
+                path: 'movies', element: <MoviesListPage/>
             },
             {
                 path:'movie/:id', element:<MovieCardPage/>
@@ -27,6 +23,9 @@ const router = createBrowserRouter([
                         path:':id', element:<MoviesByGenrePage/>
                     }
                 ]
+            },
+            {
+                path: 'search', element: <SearchPage/>
             }
         ]
     }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import {searchService} from "../../../services/searchService";
 import {Movie} from "../../MoviesListContainer";
+import css from './SearchMovies.module.css'
 
 
 const SearchMovies = () => {
@@ -25,16 +26,20 @@ const SearchMovies = () => {
 
     return (
         <div>
-            <input
-                type="text"
-                placeholder="Search movies..."
-                value={query}
-                onChange={handleInputChange}
-            />
-            <button onClick={handleSearch}>Search</button>
-            {movies.map(movie => <Movie key={movie.id} movie={movie}/>)}
+            <div className={css.input_style}>
+                <input
+                       type="text"
+                       placeholder="Search movies..."
+                       value={query}
+                       onChange={handleInputChange}
+                />
+                <button onClick={handleSearch}>Search</button>
+            </div>
+            <div className={css.movies_list}>
+                {movies.map(movie => <Movie key={movie.id} movie={movie}/>)}
+            </div>
         </div>
     );
 };
 
-export { SearchMovies };
+export {SearchMovies};
