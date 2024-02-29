@@ -12,3 +12,5 @@ export * from "./PosterPreviewContainer/BackdropPoster/BackdropPoster";
 export *  from "./PosterPreviewContainer/MainPoster/PosterPreview";
 export * from "./SearchMoviesContainer/SearchMovies/SearchMovies";
 export * from "./StarsRatingContainer/StarsRating";
+export * from "./ThemeContextContainer/ThemeContext";
+export * from "./ThemeSwitcherContainer/ThemeSwitcher";

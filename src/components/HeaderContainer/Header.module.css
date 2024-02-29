@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: aqua;
+    background-color: gray;
     color: snow;
     height: 100px;
 }
@@ -19,4 +19,9 @@
 
 .Header a[class = 'active'] {
     color: chocolate;
+}
+
+.imgStyle {
+    width: 15%;
+    background-color: chocolate;
 }
