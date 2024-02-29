@@ -32,7 +32,7 @@ const Movies = () => {
 
 
     return (
-        <div>
+        <div className={css.MoviesModule}>
             <div className={css.movies_list}>
                 {movies.results.map(movie => <Movie key={movie.id} movie={movie} />)}
             </div>

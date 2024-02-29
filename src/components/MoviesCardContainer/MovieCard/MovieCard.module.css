@@ -1,23 +1,25 @@
 .MovieCard {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    background-color: darkcyan;
-    margin-top: 150px;
+    /*height: 830px;*/
+    /*background-color: chocolate;*/
 }
 
 .mainInfo {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    padding-top: 150px;
 }
 
 .img_style {
-    width:100%;
 }
 
 .title {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+}
+
+.movieInfo {
+    padding-top: 50px;
 }

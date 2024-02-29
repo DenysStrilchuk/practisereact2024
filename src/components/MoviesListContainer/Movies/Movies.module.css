@@ -1,13 +1,20 @@
+.MoviesModule {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .movies_list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .buttons_block {
     display: flex;
     justify-content: space-around;
+    padding-top: 20px;
 }
 
 .buttons {

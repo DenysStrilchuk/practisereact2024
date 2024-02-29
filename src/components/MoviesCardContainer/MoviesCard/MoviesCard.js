@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import { movieService } from "../../../services";
 import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+
+import { movieService } from "../../../services";
 import {MovieCard} from "../MovieCard";
+import css from "./MoviesCard.module.css"
 
 const MoviesCard = () => {
     const { id } = useParams();
@@ -15,7 +17,7 @@ const MoviesCard = () => {
 
 
     return (
-        <div>
+        <div className={css.MoviesCard}>
             {movieCard && <MovieCard movieCard={movieCard}/>}
         </div>
     );
