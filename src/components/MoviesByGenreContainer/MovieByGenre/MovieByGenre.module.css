@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 20%;
+    padding-top: 20px;
 }
 
 .MovieByGenre:hover {

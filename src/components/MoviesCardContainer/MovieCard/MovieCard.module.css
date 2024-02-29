@@ -1,8 +1,6 @@
 .MovieCard {
     display: flex;
     flex-direction: column;
-    /*height: 830px;*/
-    /*background-color: chocolate;*/
 }
 
 .mainInfo {

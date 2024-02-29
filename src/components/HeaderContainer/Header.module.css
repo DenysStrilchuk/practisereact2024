@@ -2,10 +2,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: gray;
+    background-color: gainsboro;
     color: snow;
     height: 100px;
 }
+
+body.dark-mode .Header {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
 
 .Header a {
     text-decoration: none;
@@ -14,14 +20,14 @@
 }
 
 .Header a:hover {
-    color: khaki;
+    color: cornflowerblue;
 }
 
 .Header a[class = 'active'] {
-    color: chocolate;
+    color: coral;
 }
 
-.imgStyle {
-    width: 15%;
-    background-color: chocolate;
+h1 {
+    color: deepskyblue;
 }
+

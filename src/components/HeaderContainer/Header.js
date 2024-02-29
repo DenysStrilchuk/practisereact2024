@@ -1,16 +1,21 @@
 import css from "./Header.module.css";
-import {NavLink} from "react-router-dom";
-import {ThemeSwitcher} from "../ThemeSwitcherContainer";
+import { NavLink } from "react-router-dom";
+import { ThemeSwitcher } from "../ThemeSwitcherContainer";
+import { useTheme } from '../ThemeContextContainer/ThemeContext';
 
 const Header = () => {
+    const { isDarkMode } = useTheme();
+
     return (
-        <div className={css.Header}>
-            <img  src="https://www.pikpng.com/pngl/m/188-1882112_film-slide-film-tape-transparent-background-clipart.png"
-                 alt="Film,slide - Film Tape Transparent Background Clipart@pikpng.com"/>
-            <NavLink to={'movies'}>Movies</NavLink>
-            <NavLink to={'genres'}>Genres</NavLink>
-            <NavLink to={'search'}>Search</NavLink>
-            <ThemeSwitcher/>
+        <div>
+            <div className={`${css.Header} ${isDarkMode ? 'dark-mode' : ''}`}>
+                <h1>IMovie</h1>
+                <NavLink to={'movies'}>Movies</NavLink>
+                <NavLink to={'genres'}>Genres</NavLink>
+                <NavLink to={'search'}>Search</NavLink>
+                <ThemeSwitcher/>
+            </div>
+
         </div>
     );
 };
