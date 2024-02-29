@@ -1,6 +1,8 @@
-import css from "./MovieInfo.module.css"
+import css from "./MovieInfo.module.css";
 
 const MovieInfo = ({overview, release, runtime, genres}) => {
+
+
     return (
         <div>
             <h2>Overview:</h2>
@@ -8,7 +10,7 @@ const MovieInfo = ({overview, release, runtime, genres}) => {
             <h2>Genres</h2>
             <div className={css.genres}>
                 {genres.map((genres, index) => (
-                    <p key={index} className={css.genre}>{genres.name}</p>
+                    <p key={index} className={css.genre}>{genres.name} </p>
                 ))}
             </div>
             <h2>Runtime</h2>
