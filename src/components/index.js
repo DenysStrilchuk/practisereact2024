@@ -1,5 +1,6 @@
 export * from "./GenreContainer/GenresInfo";
 export * from "./HeaderContainer/Header";
+export * from "./HeaderContainer/Header.module.css";
 export * from "./MovieInfoContainer/MovieInfo";
 export * from "./MoviesByGenreContainer/MovieByGenre/MovieByGenre";
 export * from "./MoviesByGenreContainer/MoviesByGenre/MoviesByGenre";

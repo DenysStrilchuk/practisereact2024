@@ -11,7 +11,7 @@ const MovieCard = ({movieCard}) => {
             <div  className={css.mainInfo}>
                 <div className={css.img_style}>
                     <h1 className={css.title}>{title}</h1>
-                    <BackdropPoster img={backdrop_path} title={title}/>
+                    <BackdropPoster img={backdrop_path} title={title} className={css.img}/>
                     <h2>Rating</h2>
                     <StarsRating vote_average={vote_average}/>
                 </div>
@@ -21,7 +21,6 @@ const MovieCard = ({movieCard}) => {
                                genres={genres}/>
                 </div>
             </div>
-
         </div>
     );
 };

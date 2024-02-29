@@ -8,14 +8,13 @@ const Header = () => {
 
     return (
         <div>
-            <div className={`${css.Header} ${isDarkMode ? 'dark-mode' : ''}`}>
+            <div className={`${css.Header} ${isDarkMode ? css['dark-mode'] : ''}`}>
                 <h1>IMovie</h1>
                 <NavLink to={'movies'}>Movies</NavLink>
                 <NavLink to={'genres'}>Genres</NavLink>
                 <NavLink to={'search'}>Search</NavLink>
                 <ThemeSwitcher/>
             </div>
-
         </div>
     );
 };

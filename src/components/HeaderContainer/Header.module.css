@@ -2,15 +2,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: gainsboro;
+    background-color: lightslategray;
     color: snow;
     height: 100px;
 }
 
-body.dark-mode .Header {
-    background-color: #1e1e1e;
-    color: #f1f1f1;
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 .Header a {
@@ -23,11 +24,10 @@ body.dark-mode .Header {
     color: cornflowerblue;
 }
 
-.Header a[class = 'active'] {
+.Header a[class='active'] {
     color: coral;
 }
 
 h1 {
     color: deepskyblue;
 }
-
