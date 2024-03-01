@@ -31,3 +31,10 @@ body {
 h1 {
     color: deepskyblue;
 }
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

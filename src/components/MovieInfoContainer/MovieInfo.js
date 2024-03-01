@@ -1,16 +1,15 @@
 import css from "./MovieInfo.module.css";
+import {Genre} from "../GenreContainer/GenresInfo";
 
-const MovieInfo = ({overview, release, runtime, genres}) => {
-
-
+const MovieInfo = ({overview, release, runtime, genres, onGenreClick}) => {
     return (
         <div>
             <h2>Overview:</h2>
             <p>{overview}</p>
             <h2>Genres</h2>
             <div className={css.genres}>
-                {genres.map((genres, index) => (
-                    <p key={index} className={css.genre}>{genres.name} </p>
+                {genres.map((genre, index) => (
+                    <Genre key={index} genre={genre} onGenreClick={onGenreClick} />
                 ))}
             </div>
             <h2>Runtime</h2>
