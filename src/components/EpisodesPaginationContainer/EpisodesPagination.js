@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 
-import css from "./EpisodesPagination.css";
+import css from "./EpisodesPagination.module.css";
 
 const EpisodesPagination = () => {
     const {prev, next} = useSelector(state => state.episodes);
