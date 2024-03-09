@@ -4,7 +4,7 @@ import {episodeService} from "../../services";
 const initialState = {
     prev: null,
     next: null,
-    results: []
+    episodes: []
 }
 
 const getAll = createAsyncThunk(
@@ -24,13 +24,20 @@ const episodesSlice = createSlice({
     initialState,
     reducers:{},
     extraReducers: builder =>
-        builder.addCase()
+        builder
+            .addCase(getAll.fulfilled, (state, action) => {
+                const {info: {prev, next}, results} = action.payload;
+                state.prev = prev
+                state.next = next
+                state.episodes = results
+            })
 })
 
 const {reducer: episodesReducer, actions} = episodesSlice;
 
 const episodesAction = {
-    ...actions
+    ...actions,
+    getAll
 }
 
 export {

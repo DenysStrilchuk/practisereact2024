@@ -1,0 +1,6 @@
+.EpisodeTable {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black ;
+    padding-top: 20px;
+}

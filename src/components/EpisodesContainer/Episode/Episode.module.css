@@ -1,0 +1,13 @@
+.EpisodeTable {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(20% - 2px);
+}
+
+.EpisodeTable:hover {
+    cursor: pointer;
+    background-color: lightslategray;
+}
