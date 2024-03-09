@@ -24,8 +24,7 @@ const charactersSlice = createSlice({
     extraReducers: builder =>
         builder
             .addCase(getByIds.fulfilled, (state, action) => {
-                const {results} = action.payload;
-                state.characters = results
+                state.characters = action.payload
             })
 })
 
