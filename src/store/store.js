@@ -1,11 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-
-import {charactersReducer, episodesReducer} from "./slices";
+import {episodeReducer} from "./slices";
 
 const store = configureStore({
     reducer: {
-        episodes: episodesReducer,
-        characters: charactersReducer
+        episodes: episodeReducer
     }
 })
 

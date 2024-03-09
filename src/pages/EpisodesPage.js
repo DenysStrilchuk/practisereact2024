@@ -1,10 +1,7 @@
-import {Episodes, EpisodesPagination} from "../components";
-
 const EpisodesPage = () => {
     return (
         <div>
-            <Episodes/>
-            <EpisodesPagination/>
+            EpisodesPage
         </div>
     );
 };
