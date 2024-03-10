@@ -1,5 +1,30 @@
-.EpisodesPaginationBtn {
+.ButtonBck {
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0 0 15px;
+}
+
+.episodesPaginationBtn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.episodesPaginationBtn:hover {
+    background-color: brown;
+}
+
+.episodesPaginationBtn:disabled {
+    background-color: #ccc; /* сірий колір для неактивної кнопки */
+    color: #666; /* колір тексту для неактивної кнопки */
+    cursor: not-allowed; /* змінюємо курсор при наведенні на неактивну кнопку */
+}
+
+.episodesPaginationBtn:disabled:hover {
+    background-color: #ccc; /* зберігаємо сірий колір при наведенні на неактивну кнопку */
 }

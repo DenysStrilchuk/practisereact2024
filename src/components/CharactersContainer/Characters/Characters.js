@@ -18,8 +18,10 @@ const Characters = () => {
 
     return (
         <div>
-            <button onClick={navigate(-1)}>back</button>
-            <div className={css.Characters}>
+            <div className={css.btnBlock}>
+                <button className={css.backButton} onClick={() => navigate(-1)}>back</button>
+            </div>
+            <div className={css.charactersStyle}>
                 {characters.map(character => <Character key={character.id} character={character}/>)}
             </div>
         </div>

@@ -1,7 +1,25 @@
-.Characters {
+.charactersStyle {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding-top: 20px;
+}
+
+.backButton {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.backButton:hover {
+    background-color: gray;
+}
+
+.btnBlock {
+    padding: 20px 0 0 15px;
 }

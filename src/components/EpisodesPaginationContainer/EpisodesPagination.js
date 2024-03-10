@@ -22,9 +22,9 @@ const EpisodesPagination = () => {
     }
 
     return (
-        <div className={css.EpisodesPaginationBtn}>
-            <button disabled={!prev} onClick={prevPage}>prev</button>
-            <button disabled={!next} onClick={nextPage}>next</button>
+        <div className={css.ButtonBck}>
+            <button className={css.episodesPaginationBtn} disabled={!prev} onClick={prevPage}>prev</button>
+            <button className={css.episodesPaginationBtn} disabled={!next} onClick={nextPage}>next</button>
         </div>
     );
 };
